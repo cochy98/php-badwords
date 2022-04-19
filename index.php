@@ -1,7 +1,10 @@
 <?php
 $paragraph = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu';
 
+# Memorizzo una variabile GET
 $censoredWord = $_GET['word'];
+
+# Stampo la variabile recuperata
 echo 'Parola censurata: '. $censoredWord;
 ?>
 
@@ -15,7 +18,10 @@ echo 'Parola censurata: '. $censoredWord;
 </head>
 <body>
   <p>
-    <?php  var_dump(str_replace($censoredWord, " *** ", $paragraph)) ?>
+    <?php
+      # Sostituisco la parola passata tramite GET con 3 asterischi (***), nel pagarafo presente e visualizzo il paragrafo modificato, compresa la sua lunghezza
+      var_dump(str_replace($censoredWord, " *** ", $paragraph));
+    ?>
   </p>
 </body>
 </html>
