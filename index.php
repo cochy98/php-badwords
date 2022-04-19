@@ -1,5 +1,8 @@
 <?php
 $paragraph = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu';
+
+$censoredWord = $_GET['word'];
+echo 'Parola censurata: '. $censoredWord;
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +15,7 @@ $paragraph = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean c
 </head>
 <body>
   <p>
-    <?php  var_dump($paragraph) ?>
+    <?php  var_dump(str_replace($censoredWord, " *** ", $paragraph)) ?>
   </p>
 </body>
 </html>
